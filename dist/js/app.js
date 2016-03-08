@@ -408,7 +408,7 @@ function _init() {
         //Get the parent menu
         var parent = $this.parents('ul').first();
         //Close all open menus within the parent
-        var ul = parent.find('ul:visible').slideUp(animationSpeed);
+        var ul = parent.find('ul:visible').not('.open').slideUp(animationSpeed);
         //Remove the menu-open class from the parent
         ul.removeClass('menu-open');
         //Get the parent li

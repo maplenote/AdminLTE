@@ -115,7 +115,8 @@
 //Skins Mixins
 
 //Dark Sidebar Mixin
-.skin-dark-sidebar(@link-hover-border-color) {
+//maple modify
+.skin-dark-sidebar(@link-hover-border-color, @sub-link-hover-border-color) {
   // Sidebar background color (Both .wrapper and .left-side are responsible for sidebar bg color)
   .wrapper,
   .main-sidebar,
@@ -150,6 +151,16 @@
       margin: 0 1px;
       background: @sidebar-dark-submenu-bg;
     }
+    &.sub-color {
+      &:hover > a, &.active > a {
+        border-left-color: @sub-link-hover-border-color;
+      }
+      > .treeview-menu > li {
+        &.active > a, > a:hover {
+          color: lighten(@sub-link-hover-border-color, 10%);
+        }
+      }
+    }
   }
   //All links within the sidebar menu
   .sidebar a {
@@ -165,10 +176,11 @@
         color: @sidebar-dark-submenu-color;
       }
       &.active > a, > a:hover {
-        color: @sidebar-dark-submenu-hover-color;
+        color: lighten(@link-hover-border-color, 10%);
       }
     }
   }
+
   //The sidebar search form
   .sidebar-form {
     .border-radius(3px);
