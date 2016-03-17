@@ -4,6 +4,7 @@
  */
 .skin-green .main-header .navbar {
   background-color: #4db28d;
+  color: #ffffff;
 }
 .skin-green .main-header .navbar .nav > li > a {
   color: #ffffff;
@@ -52,6 +53,14 @@
 }
 .skin-green .main-header li.user-header {
   background-color: #4db28d;
+}
+.skin-green .main-sidebar .logo {
+  background-color: #45a07f;
+  color: #ffffff;
+  border-bottom: 0 solid transparent;
+}
+.skin-green .main-sidebar .logo:hover {
+  background-color: #449d7c;
 }
 .skin-green .content-header {
   background: transparent;

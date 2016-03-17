@@ -4,6 +4,7 @@
  */
 .skin-purple-light .main-header .navbar {
   background-color: #605ca8;
+  color: #ffffff;
 }
 .skin-purple-light .main-header .navbar .nav > li > a {
   color: #ffffff;
@@ -52,6 +53,14 @@
 }
 .skin-purple-light .main-header li.user-header {
   background-color: #605ca8;
+}
+.skin-purple-light .main-sidebar .logo {
+  background-color: #605ca8;
+  color: #ffffff;
+  border-bottom: 0 solid transparent;
+}
+.skin-purple-light .main-sidebar .logo:hover {
+  background-color: #5d59a6;
 }
 .skin-purple-light .content-header {
   background: transparent;

@@ -10,7 +10,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  padding-top: 50px;
+  // padding-top: 50px;
   min-height: 100%;
   width: @sidebar-width;
   z-index: 810;
@@ -19,25 +19,75 @@
   width @transition-speed @transition-fn;
   .transition-transform(@transition-rule);
   @media (max-width: @screen-header-collapse) {
-    padding-top: 100px;
+    padding-top: 50px;
   }
+  
   @media (max-width: @screen-xs-max) {
-    .translate(-@sidebar-width, 0);
+    // .translate(-@sidebar-width, 0);
+    .translate(-100%, 0);
   }
   .sidebar-collapse & {
     @media (min-width: @screen-sm) {
-      .translate(-@sidebar-width, 0);
+      // .translate(-@sidebar-width, 0);
+      .translate(-100%, 0);
     }
   }
   .sidebar-open & {
     @media (max-width: @screen-xs-max) {
       .translate(0, 0);
     }
+    @media (max-width: @screen-header-collapse) {
+      width: 100%;
+      //Logo bar
+      .logo {
+        width: 100%;
+        top: @navbar-height;
+      }
+    }
   }
 }
-
+.main-sidebar {
+  //Logo bar
+  .logo {
+    b {
+      font-size: 20px;
+    }
+    .transition(width @transition-speed @transition-fn);
+    position: absolute;
+    top: 0;
+    display: block;
+    // float: left;
+    height: @navbar-height;
+    font-size: 12px;
+    line-height: 50px;
+    text-align: center;
+    width: @sidebar-width;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 0 15px;
+    font-weight: 300;
+    overflow: hidden;
+    //Add support to sidebar mini by allowing the user to create
+    //2 logo designs. mini and lg
+    .logo-lg {
+      //should be visibile when sidebar isn't collapsed
+      display: block;
+    }
+    .logo-mini {
+      display: none;
+    }
+  }
+}
+@media (max-width: @screen-header-collapse) {
+  .main-sidebar {
+    //Logo bar
+    .logo {
+      width: 100%;
+    }
+  }
+}
 .sidebar {
   padding-bottom: 10px;
+  padding-top: 50px;
 }
 
 // remove border from form

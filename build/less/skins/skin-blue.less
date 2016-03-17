@@ -43,7 +43,11 @@
       background-color: @light-blue;
     }
   }
-
+  .main-sidebar {
+    .logo {
+      .logo-variant(darken(@light-blue, 5%));
+    }
+  }
   //Content Header
   .content-header {
     background: transparent;
@@ -53,6 +57,8 @@
   .skin-dark-sidebar(@light-blue,@fuchsia);
 }
 
-.skin-blue.layout-top-nav .main-header > .logo {
+.skin-blue.layout-top-nav .main-header > .logo,
+.skin-blue.layout-top-nav .main-sidebar > .logo {
   .logo-variant(@light-blue);
 }
+

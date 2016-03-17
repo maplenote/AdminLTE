@@ -4,6 +4,7 @@
  */
 .skin-yellow-light .main-header .navbar {
   background-color: #ff9d00;
+  color: #ffffff;
 }
 .skin-yellow-light .main-header .navbar .nav > li > a {
   color: #ffffff;
@@ -52,6 +53,14 @@
 }
 .skin-yellow-light .main-header li.user-header {
   background-color: #ff9d00;
+}
+.skin-yellow-light .main-sidebar .logo {
+  background-color: #ff9d00;
+  color: #ffffff;
+  border-bottom: 0 solid transparent;
+}
+.skin-yellow-light .main-sidebar .logo:hover {
+  background-color: #fa9a00;
 }
 .skin-yellow-light .content-header {
   background: transparent;
