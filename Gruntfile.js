@@ -6,7 +6,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     watch: {
       // If any .less file changes in directory "build/less/" run the "less"-task.
-      files: ["build/less/*.less", "build/less/skins/*.less", "dist/js/app.js","dist/**/*.html"],
+      files: ["build/bootstrap-less/*.less","build/bootstrap-less/mixins/*.less","build/less/*.less", "build/less/skins/*.less", "dist/js/app.js","dist/**/*.html"],
       tasks: ["less", "uglify"],
       options: {
         livereload: true
