@@ -102,6 +102,10 @@
   background-color: @yellow !important;
 }
 
+.bg-yellow-light {
+  background-color: lighten(@yellow , 36%) !important;
+}
+
 .bg-aqua {
   background-color: @aqua !important;
 }
@@ -377,8 +381,13 @@
   color: #fff;
 }
 
-.bg-blue-gradient {
-  .gradient(@blue; @blue; lighten(@blue, 7%)) !important;
+.bg-red-gradient {
+  .gradient(@red; @red; lighten(@red, 10%)) !important;
+  color: #fff;
+}
+
+.bg-green-gradient {
+  .gradient(@green; @green; lighten(@green, 7%)) !important;
   color: #fff;
 }
 
@@ -392,18 +401,53 @@
   color: #fff;
 }
 
+.bg-bluegreen-gradient {
+  .gradient(@bluegreen; @bluegreen; lighten(@bluegreen, 16%)) !important;
+  color: #fff;
+}
+
+.bg-blue-gradient {
+  .gradient(@blue; @blue; lighten(@blue, 7%)) !important;
+  color: #fff;
+}
+
+.bg-navy-gradient {
+  .gradient(@navy; @navy; lighten(@navy, 7%)) !important;
+  color: #fff;
+}
+
+.bg-teal-gradient {
+  .gradient(@teal; @teal; lighten(@teal, 7%)) !important;
+  color: #fff;
+}
+
+.bg-olive-gradient {
+  .gradient(@olive; @olive; lighten(@olive, 7%)) !important;
+  color: #fff;
+}
+
+.bg-lime-gradient {
+  .gradient(@lime; @lime; lighten(@lime, 10%)) !important;
+  color: #fff;
+}
+
+.bg-orange-gradient {
+  .gradient(@orange; @orange; lighten(@orange, 16%)) !important;
+  color: #fff;
+}
+
+.bg-fuchsia-gradient {
+  .gradient(@fuchsia; @fuchsia; lighten(@fuchsia, 10%)) !important;
+  color: #fff;
+}
+
 .bg-purple-gradient {
   .gradient(@purple; @purple; lighten(@purple, 16%)) !important;
   color: #fff;
 }
 
-.bg-green-gradient {
-  .gradient(@green; @green; lighten(@green, 7%)) !important;
-  color: #fff;
-}
-
-.bg-red-gradient {
-  .gradient(@red; @red; lighten(@red, 10%)) !important;
+.bg-maroon-gradient {
+  .gradient(@maroon; @maroon; lighten(@maroon, 10%)) !important;
   color: #fff;
 }
 
@@ -412,9 +456,9 @@
   color: #fff;
 }
 
-.bg-maroon-gradient {
-  .gradient(@maroon; @maroon; lighten(@maroon, 10%)) !important;
-  color: #fff;
+.bg-gray-gradient {
+  .gradient(@gray; @gray; lighten(@gray, 16%)) !important;
+  // color: #fff;
 }
 
 //Description Block Extension

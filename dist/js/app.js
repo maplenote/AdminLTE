@@ -256,13 +256,14 @@ function _init() {
       //the height of the document.
       if ($("body").hasClass("fixed")) {
         $(".content-wrapper, .right-side").css('min-height', window_height - $('.main-footer').outerHeight());
+        $(".add-min-height").css('min-height', window_height - neg);
       } else {
         var postSetWidth;
         if (window_height >= sidebar_height) {
-          $(".content-wrapper, .right-side").css('min-height', window_height - neg);
+          $(".content-wrapper, .right-side, .add-min-height").css('min-height', window_height - neg);
           postSetWidth = window_height - neg;
         } else {
-          $(".content-wrapper, .right-side").css('min-height', sidebar_height);
+          $(".content-wrapper, .right-side, .add-min-height").css('min-height', sidebar_height);
           postSetWidth = sidebar_height;
         }
 
@@ -270,7 +271,7 @@ function _init() {
         var controlSidebar = $($.AdminLTE.options.controlSidebarOptions.selector);
         if (typeof controlSidebar !== "undefined") {
           if (controlSidebar.height() > postSetWidth)
-            $(".content-wrapper, .right-side").css('min-height', controlSidebar.height());
+            $(".content-wrapper, .right-side, .add-min-height").css('min-height', controlSidebar.height());
         }
 
       }
@@ -472,7 +473,7 @@ function _init() {
         _this._fixForFixed(sidebar);
       } else {
         //If the content height is less than the sidebar's height, force max height
-        if ($('.content-wrapper, .right-side').height() < sidebar.height()) {
+        if ($('.content-wrapper, .right-side, .add-min-height').height() < sidebar.height()) {
           _this._fixForContent(sidebar);
         }
       }
@@ -520,7 +521,7 @@ function _init() {
       });
     },
     _fixForContent: function (sidebar) {
-      $(".content-wrapper, .right-side").css('min-height', sidebar.height());
+      $(".content-wrapper, .right-side, .add-min-height").css('min-height', sidebar.height());
     }
   };
 
