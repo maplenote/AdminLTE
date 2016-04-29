@@ -3130,34 +3130,33 @@ table.text-center th {
   float: left;
 }
 /*
- * Page: Mailbox
- * -------------
+ * Component: two side
  */
-.mailbox {
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+.two-side {
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   position: relative;
   -webkit-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
   -o-transform: translate(0, 0);
   transform: translate(0, 0);
 }
-.mailbox .left-content {
+.two-side .left-content {
   position: relative;
   padding: 15px;
 }
-.mailbox .right-content {
+.two-side .right-content {
   position: fixed;
   top: 0;
   bottom: 0;
   padding: 15px;
   overflow: auto;
 }
-.mailbox .left-content {
+.two-side .left-content {
   width: 100%;
 }
-.mailbox .right-content {
+.two-side .right-content {
   margin-left: 100%;
   width: 100%;
 }
@@ -3233,16 +3232,16 @@ table.text-center th {
   }
 }
 @media (max-width: 767px) {
-  .mailbox {
+  .two-side {
     -webkit-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     -o-transform: translate(0, 0);
     transform: translate(0, 0);
   }
-  .mailbox .left-content {
+  .two-side .left-content {
     width: 100%;
   }
-  .mailbox .right-content {
+  .two-side .right-content {
     margin-left: 100%;
     width: 100%;
   }
@@ -3259,32 +3258,6 @@ table.text-center th {
     margin-left: 100%;
     width: 100%;
   }
-}
-.mailbox-list > ul {
-  list-style: none;
-  padding: 0;
-}
-.mailbox-list > ul > li {
-  display: table;
-  width: 100%;
-  padding: 8px;
-  margin: 0;
-}
-.mailbox-list > ul > li > a {
-  display: table-row;
-}
-.mailbox-list .mailbox-checkbox {
-  display: table-cell;
-  padding: 0 8px;
-  margin-right: 8px;
-}
-.mailbox-list .mailbox-date {
-  display: table-cell;
-  width: 100px;
-}
-.mailbox-list .mailbox-subject {
-  margin-right: 8px;
-  display: table-cell;
 }
 .right-show .mailbox-list > ul > li > a {
   display: block;
@@ -3313,6 +3286,36 @@ table.text-center th {
     display: block;
     margin-left: 44px;
   }
+}
+/*
+ * Page: Mailbox
+ * -------------
+ */
+.mailbox-list > ul {
+  list-style: none;
+  padding: 0;
+}
+.mailbox-list > ul > li {
+  display: table;
+  width: 100%;
+  padding: 8px;
+  margin: 0;
+}
+.mailbox-list > ul > li > a {
+  display: table-row;
+}
+.mailbox-list .mailbox-checkbox {
+  display: table-cell;
+  padding: 0 8px;
+  margin-right: 8px;
+}
+.mailbox-list .mailbox-date {
+  display: table-cell;
+  width: 100px;
+}
+.mailbox-list .mailbox-subject {
+  margin-right: 8px;
+  display: table-cell;
 }
 .mailbox-messages > .table {
   margin: 0;

@@ -49,126 +49,6 @@
 
 
 
-.full-left() {
-  .translate(0, 0); 
-  .left-content {
-    width: 100%;
-    // .translate(0, 0) !important;
-  }
-  .right-content {
-    // .translate(100%, 0) !important;  
-    margin-left: 100%;
-    width: 100%;
-  }
-}
-
-.full-right() {
-  .translate(-100%, 0); 
-  .left-content {
-    width: 100%;
-    // .translate(0, 0) !important;
-  }
-  .right-content {
-    // .translate(100%, 0) !important; 
-    margin-left: 100%;
-    width: 100%;
-  }
-}
-.one-third-left() {
-  .translate(0, 0); 
-  .left-content {
-    width: 33.33%;
-    padding-right: 0;
-    .mailbox-list > ul > li > a {
-      display: block;
-    }
-    .mailbox-checkbox {
-      display: inline;
-    }
-    .mailbox-date {
-      display: inline;
-    }
-    .mailbox-subject {
-      display: block;
-      margin-left: 44px; 
-    }
-    // .translate(0, 0) !important;
-  }
-  .right-content {
-    // .translate(100%, 0) !important; 
-    margin-left: 33.33%;
-    width: 66.67%;
-  }
-}
-.min-left() {
-  .mailbox-list{ 
-    > ul > li > a {
-      display: block;
-    }
-    .mailbox-checkbox {
-      display: inline;
-    }
-    .mailbox-date {
-      display: inline;
-    }
-    .mailbox-subject {
-      display: block;
-      margin-left: 44px; 
-    }
-  }
-}
-
-.mailbox {
-
-  // &:extend(.clearfix all);
-  .transition(all @transition-speed);
-  // .translate(0, 0) ; 
-  // margin: 0 -15px;
-  // padding: 0 15px;
-  position: relative;
-
-  .left-content {
-    position: relative;
-    padding: 15px; 
-    // width: 100%;
-  }
-  .right-content {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    padding: 15px; 
-    // width: 100%;
-    // margin-left: 100%;
-    overflow: auto;
-  }
-  .full-left();
-}
-
-.right-show {
-  .one-third-left();
-}
-
-@media (max-width: @screen-sm-max) {
-  .right-show {
-    .full-right();
-  }
-}
-@media (max-width: @screen-sm-max) {
-  .sidebar-collapse {
-    .right-show {
-      .one-third-left();
-    }
-  }
-}
-@media (max-width: @screen-xs-max) {
-  .mailbox {
-    .full-left();
-  }
-  .right-show {
-    .full-right();
-  }
-
-}
 .mailbox-list {
   > ul {
     list-style: none;
@@ -205,12 +85,7 @@
 }
 
 
-.right-show {
-  .min-left();
-}
-@media (max-width: @screen-xs-max) {
-  .min-left();
-}
+
 // @media (max-width: @screen-xs-max) {
 //   .left-content {
 //     &.left-width {
