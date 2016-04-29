@@ -334,6 +334,45 @@ a:focus {
   font-size: 15px;
   display: inline-block;
   padding-left: 4px;
+  padding-right: 4px;
+  font-weight: 300;
+}
+.content-header > h2,
+.content > h2 {
+  margin: 0;
+  font-size: 20px;
+}
+.content-header > h2 > small,
+.content > h2 > small {
+  font-size: 15px;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-weight: 300;
+}
+.content-header > h3,
+.content > h3,
+.content-header h4,
+.content h4,
+.content-header h5,
+.content h5,
+.content-header h6,
+.content h6 {
+  margin: 0;
+  font-size: 18px;
+}
+.content-header > h3 > small,
+.content > h3 > small,
+.content-header h4 > small,
+.content h4 > small,
+.content-header h5 > small,
+.content h5 > small,
+.content-header h6 > small,
+.content h6 > small {
+  font-size: 12px;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
   font-weight: 300;
 }
 .content-header > .breadcrumb,
