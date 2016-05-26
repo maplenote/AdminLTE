@@ -2,6 +2,32 @@
  * Component: Progress Bar
  * -----------------------
  */
+//----------override-bootstrap-start
+  // WebKit
+  @-webkit-keyframes progress-bar-stripes {
+    from  { background-position: 0 0; }
+    to    { background-position: 40px 0; }
+  }
+
+  // Spec and IE10+
+  @keyframes progress-bar-stripes {
+    from  { background-position: 0 0; }
+    to    { background-position: 40px 0; }
+  }
+
+  .progress-bar-variant-override(@color) {
+    background-color: @color;
+
+    // Deprecated parent class requirement as of v3.2.0
+    .progress-striped & {
+      #gradient > .striped(@color: rgba(255,255,255,.28));
+    }
+  }
+
+  .progress-bar-striped {
+    #gradient > .striped(@color: rgba(255,255,255,.28));
+  }
+//-----------override-bootstrap-end
 
 //General CSS
 .progress,
@@ -87,25 +113,25 @@
 // -------------------------
 .progress-bar-light-blue,
 .progress-bar-primary {
-  .progress-bar-variant(@light-blue);
+  .progress-bar-variant-override(@light-blue);
 }
 
 .progress-bar-green,
 .progress-bar-success {
-  .progress-bar-variant(@green);
+  .progress-bar-variant-override(@green);
 }
 
 .progress-bar-aqua,
 .progress-bar-info {
-  .progress-bar-variant(@aqua);
+  .progress-bar-variant-override(@aqua);
 }
 
 .progress-bar-yellow,
 .progress-bar-warning {
-  .progress-bar-variant(@yellow);
+  .progress-bar-variant-override(@yellow);
 }
 
 .progress-bar-red,
 .progress-bar-danger {
-  .progress-bar-variant(@red);
+  .progress-bar-variant-override(@red);
 }
