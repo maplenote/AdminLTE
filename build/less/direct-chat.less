@@ -80,6 +80,17 @@
       border-left-color: @direct-chat-default-msg-border-color;
     }
   }
+  .top&,.top & {
+    margin-top: 15px;
+    margin-left: 0;
+    &:after,
+    &:before {
+      right: 90%;
+      top: -6px;
+      border-right-color: transparent;
+      border-bottom-color: @direct-chat-default-msg-border-color;
+    }
+  }
 }
 
 .direct-chat-img {
@@ -103,7 +114,7 @@
 }
 
 .direct-chat-timestamp {
-  color: #999;
+  opacity: 0.6;
 }
 
 //Direct chat contacts pane
